@@ -1,0 +1,61 @@
+<script>
+2
+const questions = [
+3
+"❤️ Liebst du mich auch?",
+4
+"❤️ Liebst du mich wirklich?",
+5
+"😊 Freust du dich schon auf Montag?",
+6
+"🍽️ Möchtest du am Donnerstag mit mir auf ein Date gehen?"
+7
+];
+8
+ 
+9
+let current = 0;
+10
+ 
+11
+function nextQuestion() {
+12
+current++;
+13
+ 
+14
+if(current < questions.length){
+15
+document.getElementById("question").innerHTML =
+16
+questions[current];
+17
+} else {
+18
+showFinal();
+19
+}
+20
+}
+21
+ 
+22
+function showFinal() {
+23
+document.body.innerHTML = `
+24
+<div style="text-align:center;margin-top:100px">
+25
+<img src="https://media.tenor.com/qXq4R-vQ6AUAAAAi/lion-walking.gif" width="250">
+26
+<h1>🎉 Herzlichen Glückwunsch! 🎉</h1>
+27
+<h2>❤️ Du hast ein Date! ❤️</h2>
+28
+</div>
+29
+`;
+30
+}
+31
+</script>
